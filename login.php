@@ -1,16 +1,16 @@
 <?php
-function connect_db() {
- $servername = "localhost";
- $username = "a1704562";
- $password = "raNAdj87c";
- $dbname = "a1704562";
- // Create connection
- $conn = new mysqli($servername, $username, $password, $dbname);
- // Check connection
- if ($conn->connect_error) {
- die("Connection failed: " . $conn->connect_error);
+ if($_POST['password'] == 'password' && $_POST['username'] == 'username') {
+ session_start();
+ $_SESSION['username']='username';
+ redirect("list.php");
  } else {
+ echo 'Login failed';
  }
- return $conn;
-}
+ function redirect($url) {
+ ob_start();
+ header('Location: '.$url);
+ ob_end_flush();
+ die();
+ }
 ?>
+
