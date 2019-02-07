@@ -17,7 +17,5 @@ if ($conn->connect_error) {
 }
 return $conn;
 
-function connect_db () {
-
 }
 ?>
