@@ -1,4 +1,5 @@
 <?php
+
 function connect_db () {
 
 $servername = "localhost";
@@ -15,5 +16,8 @@ if ($conn->connect_error) {
 } else {
 }
 return $conn;
+
+function connect_db () {
+
 }
 ?>
